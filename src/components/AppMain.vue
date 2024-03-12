@@ -4,6 +4,7 @@ import AppNewMovies from './AppNewMovies.vue'
 import AppMoviePlaylist from './AppMoviePlaylist.vue'
 import AppComing from './AppComing.vue'
 import AppMoviesList from './AppMoviesList.vue'
+import AppNews from './AppNews.vue'
 
 export default {
     name: 'AppMain',
@@ -13,7 +14,8 @@ export default {
         AppNewMovies,
         AppMoviePlaylist,
         AppComing,
-        AppMoviesList
+        AppMoviesList,
+        AppNews
     }
 }
 </script>
@@ -25,6 +27,7 @@ export default {
         <AppMoviePlaylist></AppMoviePlaylist>
         <AppComing></AppComing>
         <AppMoviesList></AppMoviesList>
+        <AppNews></AppNews>
     </main>
 </template>
 

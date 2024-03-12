@@ -54,6 +54,8 @@ export default {
 
 section:nth-of-type(2) {
 
+    margin-bottom: 100px;
+
     .content {
     
         display: flex;

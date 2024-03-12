@@ -1,15 +1,15 @@
 <script>
 export default {
-    name: 'AppJumbo',
+    name: 'AppComing',
 }
 </script>
 
 <template>
     <div class="jumbo">
         <div class="text">
-            <h2>Welcome To Our Movie Site</h2>
+            <h2>COMING SOON MOVIE</h2>
             <h1>
-                OUR SPECIAL <span>MOVIES</span>
+                MAX STILL
             </h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, perferendis tenetur tempore commodi iste culpa quia ducimus voluptatem porro minima harum, incidunt atque? Nisi laboriosam vitae rerum incidunt, quas optio.
@@ -22,15 +22,15 @@ export default {
 
 @use '../styles/variables' as *;
 
-
-.jumbo:nth-of-type(1) {
+.jumbo:nth-of-type(2) {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/coming-bg.jpg");
+    background-size: cover;
+    background-position: center;
     
-    background-image: url('public/img/slider-1536x520.jpg');
-  
-    & .text span {
-      color: $primary;
-      }
-  }
 
+    h2 {
+        color: $primary;
+    }
+}
 
 </style>

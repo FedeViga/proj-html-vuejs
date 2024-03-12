@@ -2,6 +2,7 @@
 import AppJumbo from './AppJumbo.vue'
 import AppNewMovies from './AppNewMovies.vue'
 import AppMoviePlaylist from './AppMoviePlaylist.vue'
+import AppComing from './AppComing.vue'
 
 export default {
     name: 'AppMain',
@@ -9,7 +10,8 @@ export default {
     components: {
         AppJumbo,
         AppNewMovies,
-        AppMoviePlaylist
+        AppMoviePlaylist,
+        AppComing
     }
 }
 </script>
@@ -19,6 +21,7 @@ export default {
         <AppJumbo></AppJumbo>
         <AppNewMovies></AppNewMovies>
         <AppMoviePlaylist></AppMoviePlaylist>
+        <AppComing></AppComing>
     </main>
 </template>
 

@@ -1,11 +1,13 @@
 <script>
 import AppJumbo from './AppJumbo.vue'
+import AppNewMovies from './AppNewMovies.vue'
 
 export default {
     name: 'AppMain',
 
     components: {
-        AppJumbo
+        AppJumbo,
+        AppNewMovies
     }
 }
 </script>
@@ -13,6 +15,7 @@ export default {
 <template>
     <main>
         <AppJumbo></AppJumbo>
+        <AppNewMovies></AppNewMovies>
     </main>
 </template>
 

@@ -29,6 +29,12 @@ export default {
 
 nav {
 
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    background-color: $primary-bg;
+    border-bottom: 1px solid $secondary;
+
     .container {
         display: flex;
         justify-content: space-between;

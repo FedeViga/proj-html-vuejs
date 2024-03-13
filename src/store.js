@@ -99,5 +99,33 @@ export const store = reactive ({
             name: 'Contact Us',
             linkList: ['Contact Us']
         },
+    ],
+
+    newsList: [
+        {
+            title: 'News 1',
+            image: '/img/blog-570x570.jpg',
+            date: '11/12/2023'
+        },
+        {
+            title: 'News 2',
+            image: '/img/blog2-570x570.jpg',
+            date: '11/12/2023'
+        },
+        {
+            title: 'News 3',
+            image: '/img/blog3-570x570.jpg',
+            date: '11/12/2023'
+        },
+        {
+            title: 'News 4',
+            image: '/img/blog4-570x570.jpg',
+            date: '11/12/2023'
+        },
+        {
+            title: 'News 5',
+            image: '/img/blog5-570x570.jpg',
+            date: '11/12/2023'
+        },
     ]
 })

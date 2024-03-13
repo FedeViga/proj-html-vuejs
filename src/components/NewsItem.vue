@@ -1,15 +1,22 @@
 <script>
 export default {
     name: 'NewsItem',
+
+    props: {
+        news: Object,
+    }
 }
 </script>
 
 <template>
     <div class="news">
-        <img src="/img/blog-570x570.jpg" alt="">
+        <img :src="news.image" alt="">
+        <div class="date">
+            {{ news.date }}
+        </div>
         <div class="description">
             <h2>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                {{ news.title }}
             </h2>
         </div>
 
@@ -31,6 +38,25 @@ export default {
 .news {
     position: relative;
     display: inline-block;
+    background-color: black;
+
+    img {
+        opacity: .5;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .date {
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        padding: 5px 10px;
+        background-color: $primary;
+        border-top-left-radius: 17px;
+        border-bottom-left-radius: 17px;
+    }
 
     .rating {
         position: absolute;

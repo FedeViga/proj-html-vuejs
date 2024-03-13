@@ -10,6 +10,9 @@ export default {
 
 <template>
     <div class="card">
+        <div class="play">
+            <i class="fa-regular fa-circle-play"></i>
+        </div>
         <img :src="movie.posterImage">
         <div class="rating">
             <i class="fa-solid fa-star"></i>
@@ -50,6 +53,7 @@ export default {
 @use '../styles/variables' as *;
 
 .card {
+    cursor: pointer;
     position: relative;
     display: inline-block;
     width: calc(100% / 3);
@@ -57,6 +61,15 @@ export default {
     border-radius: 20px;
     overflow: hidden;
     height: 500px;
+
+    .play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        display: none;
+    }
 
     img {
         width: 100%;

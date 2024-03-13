@@ -1,11 +1,18 @@
 <script>
 import NewsItem from './NewsItem.vue'
+import { store } from '../store';
 
 export default {
     name: 'AppMoviesList',
 
     components: {
         NewsItem
+    },
+
+    data() {
+        return {
+            store,
+        }
     }
 }
 </script>
@@ -25,13 +32,13 @@ export default {
 
                 <div class="news-list">
                     <div class="big">
-                        <NewsItem></NewsItem>
+                        <NewsItem :news="store.newsList[0]"></NewsItem>
                     </div>
                     <div class="small">
-                        <NewsItem></NewsItem>
-                        <NewsItem></NewsItem>
-                        <NewsItem></NewsItem>
-                        <NewsItem></NewsItem>
+                        <NewsItem :news="store.newsList[1]"></NewsItem>
+                        <NewsItem :news="store.newsList[2]"></NewsItem>
+                        <NewsItem :news="store.newsList[3]"></NewsItem>
+                        <NewsItem :news="store.newsList[4]"></NewsItem>
                     </div>
                 </div>
             </div>
@@ -52,6 +59,7 @@ section:nth-of-type(4) {
 
             .news {
                 width: 100%;
+                height: 100%;
             }
         }
 
@@ -63,11 +71,16 @@ section:nth-of-type(4) {
 
             .news {
                 width: calc(50% - 20px / 2);
-
-                img {
-                    width: 100%;
-                }
             }
+        }
+
+        .news:hover {
+            background: linear-gradient($primary, black);
+            cursor: pointer;
+        }
+
+        .news:hover .date {
+            display: block;
         }
     }
 }

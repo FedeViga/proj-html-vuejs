@@ -69,6 +69,10 @@ section:nth-of-type(3) {
     .card:hover h4 {
         display: block;
     }
+
+    .card:hover .play {
+        display: block;
+    }
 }
 
 </style>

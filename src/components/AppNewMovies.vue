@@ -1,11 +1,18 @@
 <script>
 import MovieItem from './MovieItem.vue';
+import { store } from '../store';
 
 export default {
     name: 'AppNewMovies',
 
     components: {
         MovieItem
+    },
+
+    data() {
+        return {
+            store,
+        }
     }
 }
 </script>
@@ -24,10 +31,12 @@ export default {
             </div>
 
             <div class="content">
-
-                <MovieItem></MovieItem>
-                <MovieItem></MovieItem>
-                <MovieItem></MovieItem>
+                <div class="slider">
+                    <MovieItem 
+                        v-for="currentMovie in store.moviesList"
+                        :movie="currentMovie"
+                    ></MovieItem>
+                </div>
             </div>
         </div>
     </section>
@@ -44,6 +53,27 @@ export default {
 
     p {
         margin-bottom: 10px;
+    }
+}
+
+.content {
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+
+.slider {
+    display: inline-block;
+    animation: 30s slide infinite ease;
+
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
 

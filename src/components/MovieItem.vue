@@ -1,22 +1,27 @@
 <script>
 export default {
     name: 'MovieItem',
+
+    props: {
+        movie: Object,
+    }
 }
 </script>
 
 <template>
     <div class="card">
-        <img src="/img/1-2.jpg" alt="">
+        <img :src="movie.posterImage">
         <div class="rating">
-            <i class="fa-solid fa-star"></i> 3/10
+            <i class="fa-solid fa-star"></i>
+            {{ movie.rating }}
         </div>
         <div class="description">
 
             <h2>
-                Movie 1
+                {{ movie.title }}
             </h2>
             <h3>
-                Category: 
+                Category: {{ movie.category }}
             </h3>
         </div>
 
@@ -25,7 +30,7 @@ export default {
                 Details
             </div>
             <div class="views">
-                381 views
+                {{ movie.views }} views
             </div>
         </div>
     </div>
@@ -39,10 +44,16 @@ export default {
     position: relative;
     display: inline-block;
     width: calc(100% / 3);
+    background-color: black;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 500px;
 
     img {
         width: 100%;
-        border-radius: 20px;
+        height: 100%;
+        object-fit: cover;
+        opacity: .5;
     }
 
     .rating {

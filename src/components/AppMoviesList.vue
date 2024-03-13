@@ -1,11 +1,18 @@
 <script>
 import MovieItem from './MovieItem.vue'
+import { store } from '../store';
 
 export default {
     name: 'AppMoviesList',
 
     components: {
         MovieItem
+    },
+
+    data() {
+        return {
+            store,
+        }
     }
 }
 </script>
@@ -24,12 +31,10 @@ export default {
                 </div>
                 <div class="movies-list">
 
-                    <MovieItem></MovieItem>
-                    <MovieItem></MovieItem>
-                    <MovieItem></MovieItem>
-                    <MovieItem></MovieItem>
-                    <MovieItem></MovieItem>
-                    <MovieItem></MovieItem>
+                    <MovieItem 
+                    v-for="currentMovie in store.moviesList"
+                    :movie="currentMovie"
+                ></MovieItem>
 
                 </div>
             </div>

@@ -1,6 +1,14 @@
 <script>
+import { store } from '../store';
+
 export default {
     name: 'AppNav',
+
+    data() {
+        return {
+            store,
+        }
+    }
 }
 </script>
 
@@ -8,13 +16,15 @@ export default {
     <nav>
         <div class="container">
             <ul class="links">
-                <li>Home</li>
-                <li>Celebrity</li>
-                <li>Movie</li>
-                <li>Page</li>
-                <li>Shop</li>
-                <li>Blog</li>
-                <li>Contact Us</li>
+                <li v-for="currentLink in store.navLinks">
+                    {{ currentLink.name }}
+                    <i v-if="currentLink.linkList.length > 1" class="fa-solid fa-caret-down"></i>
+                    <div class="dropdown" v-if="currentLink.linkList.length > 1">
+                        <div v-for="dropdownLink in currentLink.linkList">
+                            {{ dropdownLink }}
+                        </div>
+                    </div>
+                </li>
             </ul>
             <div class="shop">
                 <i class="fa-solid fa-basket-shopping"></i>
@@ -39,12 +49,45 @@ nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 0px;
     
         .links {
+            display: flex;
+            align-items: center;
+            height: 70px;
             list-style-type: none;
             display: flex;
             gap: 20px;
+
+            li {
+                position: relative;
+            }
+
+            li:hover {
+                color: $primary;
+                cursor: pointer;
+            }
+
+            li:hover .dropdown {
+                display: block;
+            }
+
+            .dropdown {
+                color: white;
+                position: absolute;
+                width: 150px;
+                padding-top: 20px;
+                display: none;
+                background-color: $primary-bg;
+
+                div {
+                    padding: 10px;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+
         }
     
         .shop {

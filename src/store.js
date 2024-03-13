@@ -42,5 +42,36 @@ export const store = reactive ({
             views: '',
             category: '',
         },
+    ],
+
+    navLinks : [
+        {
+            name: 'Home',
+            linkList: ['Home', 'Home 2', 'Home 3', 'Home 4', 'Home 5', 'Home 6']
+        },
+        {
+            name: 'Celebrity',
+            linkList: ['Celebrity', 'Celebrity 2', 'Celebrity 3']
+        },
+        {
+            name: 'Movie',
+            linkList: ['Movie', 'Movie 2', 'Movie 3', 'Movie 4', 'Movie 5']
+        },
+        {
+            name: 'Page',
+            linkList: ['Page', 'Page 2', 'Page 3']
+        },
+        {
+            name: 'Shop',
+            linkList: ['Shop', 'Shop 2', 'Shop 3', 'Shop 4', 'Shop 5', 'Shop 6']
+        },
+        {
+            name: 'Blog',
+            linkList: ['Blog']
+        },
+        {
+            name: 'Contact Us',
+            linkList: ['Contact Us']
+        },
     ]
 })

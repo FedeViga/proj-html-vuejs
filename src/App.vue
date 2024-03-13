@@ -43,6 +43,11 @@ export default {
   cursor: pointer;
   background-color: white;
   padding: 10px 14px;
+  transition: .2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   .fa-chevron-up {
     color: black;

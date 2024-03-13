@@ -57,6 +57,18 @@ section:nth-of-type(3) {
             width: calc(100% / 3 - 20px / 3 * 2);
         }
     }
+
+    .card:hover {
+        background: linear-gradient($primary, black);
+    }
+
+    .card:hover .lenght {
+        display: block;
+    }
+
+    .card:hover h4 {
+        display: block;
+    }
 }
 
 </style>

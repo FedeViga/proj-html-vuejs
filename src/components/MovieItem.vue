@@ -15,6 +15,9 @@ export default {
             <i class="fa-solid fa-star"></i>
             {{ movie.rating }}
         </div>
+        <div class="lenght">
+            {{ movie.lenght }}
+        </div>
         <div class="description">
 
             <h2>
@@ -23,6 +26,12 @@ export default {
             <h3>
                 Category: {{ movie.category }}
             </h3>
+            <h4>
+                Release : {{ movie.release }}
+            </h4>
+            <h4>
+                Genres : {{ movie.genres }}
+            </h4>
         </div>
 
         <div class="info">
@@ -67,11 +76,26 @@ export default {
         }
     }
 
+    .lenght {
+        display: none;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        padding: 5px 10px;
+        border-top-right-radius: 17px;
+        border-bottom-right-radius: 17px;
+        background-color: $primary;
+    }
+
     .description {
         position: absolute;
         bottom: 100px;
         left: 0;
         padding: 0px 20px;
+
+        h4 {
+            display: none;
+        }
     }
 
     .info {

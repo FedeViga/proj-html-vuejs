@@ -23,6 +23,8 @@ export default {
 @use '../styles/variables' as *;
 
 section:nth-of-type(5) {
+    
+    margin-bottom: 70px;
 
     .container {
         display: flex;
@@ -41,9 +43,13 @@ section:nth-of-type(5) {
             
             input {
                 background-color: transparent;
-                border: 2px solid $secondary;
+                border: 2px solid white;
                 border-radius: 22px;
                 padding-left: 20px;
+
+                &::placeholder {
+                    color: white;
+                }
             }
         }
 
@@ -51,6 +57,13 @@ section:nth-of-type(5) {
             background-color: $primary-bg;
             padding: 10px 20px;
             border-radius: 22px;
+            transition: .2s ease;
+
+            &:hover {
+                cursor: pointer;
+                background-color: white;
+                color: $primary-bg;
+            }
         }
     }
 }

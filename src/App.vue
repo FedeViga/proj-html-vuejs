@@ -2,12 +2,14 @@
 import AppHeader from "./components/AppHeader.vue";
 import AppNav from "./components/AppNav.vue";
 import AppMain from "./components/AppMain.vue";
+import AppFooter from './components/AppFooter.vue';
 
 export default {
   components: {
     AppHeader,
     AppNav,
-    AppMain
+    AppMain,
+    AppFooter
   },
 
   methods: {
@@ -26,6 +28,7 @@ export default {
   <AppHeader></AppHeader>
   <AppNav></AppNav>
   <AppMain></AppMain>
+  <AppFooter></AppFooter>
 
   <div class="go-top" @click="goTop()">
     <i class="fa-solid fa-chevron-up"></i>

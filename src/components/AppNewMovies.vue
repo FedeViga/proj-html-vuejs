@@ -59,12 +59,20 @@ export default {
 .content {
     overflow: hidden;
     white-space: nowrap;
+
+    &:hover .slider {
+        animation-play-state: paused;
+    } 
     
 }
 
 .slider {
     display: inline-block;
     animation: 30s slide infinite ease;
+
+    .card:hover {
+        background: linear-gradient($primary, black);
+    }
 
 }
 

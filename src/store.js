@@ -127,5 +127,39 @@ export const store = reactive ({
             image: '/img/blog5-570x570.jpg',
             date: '11/12/2023'
         },
+    ],
+
+    footerLinks: [
+        {
+            title: 'About Us',
+            paragraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore repellendus accusantium aliquid reprehenderit natus nemo non facilis corrupti commodi voluptates, a deleniti quasi molestias ipsum adipisci id consequatur sequi cumque.',
+            social: 'true'
+        },
+        {
+            title: 'Movie Category',
+            list: [
+                'English New Movie',
+                'Hindi All Movie',
+                'Latest Tamil Movie',
+                'New Top Rating Movie',
+                'Homn New Movie',
+                'Animation New Movie'
+            ]
+        },
+        {
+            title: 'Information',
+            list: [
+                'Youtube Video Post',
+                'Actor Information',
+                'New Promotion',
+                'Latest Movie in English',
+                'Latest Film Production',
+                'Video New Video'
+            ]
+        },
+        {
+            title: 'Recent Post',
+            news: 'true'
+        }
     ]
 })

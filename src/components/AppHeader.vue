@@ -76,20 +76,45 @@ header {
 
                     .fa-facebook-f {
                         color: #3B5998;
+                        &:hover {
+                            cursor: pointer;
+                            color: $primary;
+                        }
                     }
                     .fa-twitter {
-                        color: #00ACEE;        
+                        color: #00ACEE;  
+                        &:hover {
+                            cursor: pointer;
+                            color: $primary;
+                        }      
                     }
                     .fa-linkedin-in {
                         color: #0D6C99;
+                        &:hover {
+                            cursor: pointer;
+                            color: $primary;
+                        }
                     }
                     .fa-square-instagram {
                         color: #9E1E27;
+                        &:hover {
+                            cursor: pointer;
+                            color: $primary;
+                        }
                     }
                     .fa-google-plus-g {
                         color: #C74436;
+                        &:hover {
+                            cursor: pointer;
+                            color: $primary;
+                        }
                     }
                 }
+            }
+
+            .login:hover {
+                color: $primary;
+                cursor: pointer;
             }
         }
     
@@ -107,16 +132,20 @@ header {
     
             input {
                 background-color: $primary-bg;
-                color: $secondary;
+                color: white;
                 height: 50px;
                 border: 1px solid $secondary;
                 padding: 0px 10px;
-            }
+
+                &::placeholder {
+                    color: white;
+                }            }
     
             button {
                 height: 50px;
                 padding: 10px 20px;
                 background-color: $primary;
+                cursor: pointer;
             }
         }
     }

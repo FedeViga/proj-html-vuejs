@@ -92,6 +92,11 @@ nav {
     
         .shop {
             position: relative;
+
+            &:hover .fa-solid {
+                color: $primary;
+                cursor: pointer;
+            }
     
             &::after {
                 content: '0';

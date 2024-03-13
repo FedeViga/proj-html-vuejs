@@ -9,6 +9,8 @@ export const store = reactive ({
             rating: '3/10',
             views: '223',
             category: 'Top Rating',
+            release: '15/01/2009',
+            lenght: '2:30:00'
         },
         {
             title: 'Movie 2',
@@ -17,6 +19,8 @@ export const store = reactive ({
             rating: '7/10',
             views: '568',
             category: 'Coming Soon',
+            release: '05/11/2021',
+            lenght: '2:30:00'
         },
         {
             title: 'Movie 3',
@@ -25,6 +29,8 @@ export const store = reactive ({
             rating: '8/10',
             views: '721',
             category: 'Latest Movie',
+            release: '23/10/2023',
+            lenght: '2:30:00'
         },
         {
             title: 'Movie 4',
@@ -33,6 +39,8 @@ export const store = reactive ({
             rating: '6/10',
             views: '844',
             category: 'Latest Movie',
+            release: '11/06/2017',
+            lenght: '2:30:00'
         },
         {
             title: 'Movie 5',
@@ -41,6 +49,8 @@ export const store = reactive ({
             rating: '6/10',
             views: '244',
             category: 'Latest Movie',
+            release: '24/04/2021',
+            lenght: '2:30:00'
         },
         {
             title: 'Movie 6',
@@ -49,6 +59,8 @@ export const store = reactive ({
             rating: '7/10',
             views: '798',
             category: 'Top Rating',
+            release: '05/11/2021',
+            lenght: '2:30:00'
         },
     ],
 

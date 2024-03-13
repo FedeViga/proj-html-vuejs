@@ -1,6 +1,14 @@
 <script>
+import { store } from '../store';
+
 export default {
     name: 'AppMoviePlaylist',
+
+    data() {
+        return {
+            store,
+        }
+    }
 }
 </script>
 
@@ -31,16 +39,23 @@ export default {
                         </p>
                     </div>
                     <div class="movies-list">
-                        <div class="movie"></div>
-                        <div class="movie"></div>
-                        <div class="movie"></div>
-                        <div class="movie"></div>
-                        <div class="movie"></div>
-                        <div class="movie"></div>
-                        <div class="movie"></div>
-                        <div class="movie"></div>
-                        <div class="movie"></div>
-                        <div class="movie"></div>
+                        <div v-for="currentMovie in store.moviesList" class="movie">
+                            <img :src="currentMovie.posterImage" alt="">
+                            <div class="info">
+                                <h4>
+                                    {{ currentMovie.title }}
+                                </h4>
+                                <p>
+                                    {{ currentMovie.views }} views
+                                </p>
+                                <p>
+                                    {{ currentMovie.release }}
+                                </p>
+                                <p>
+                                    {{ currentMovie.lenght }}
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,11 +99,26 @@ section:nth-of-type(2) {
             .movies-list {
                 overflow: auto;
                 height: calc(100% - 93px);
-            }
-            .movies-list > * {
-                height: 100px;
-                // test
-                border: 1px dashed red;
+
+                .movie {
+                    display: flex;
+                    padding: 10px;
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                    }
+                    .info {
+                        padding: 0px 10px;
+                    }
+
+                    &:hover {
+                        background-color: $primary-bg;
+                        cursor: pointer;
+                    }
+                }
+
             }
         }
     }
